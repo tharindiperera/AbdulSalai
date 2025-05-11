@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mohommed Faraz Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Segoe+UI:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #2c3e50;
+      --secondary: #34495e;
+      --accent: #e67e22;
+      --bg-light: #fdfdfd;
+      --bg-dark: #ecf0f1;
+      --text-dark: #2c3e50;
+      --text-light: #ffffff;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: var(--bg-light);
+      color: var(--text-dark);
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--primary);
+      color: var(--text-light);
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+
+    header h1 {
+      font-size: 3.0rem;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      color: var(--bg-dark);
+      font-style: italic;
+    }
+
+    nav {
+      background: var(--secondary);
+      padding: 1rem 0;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    .navbar li a {
+      color: var(--text-light);
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .navbar li a:hover {
+      color: var(--accent);
+    }
+
+    section {
+      padding: 3rem 1.5rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .profile-card {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row-reverse;
+      gap: 2rem;
+      align-items: center;
+      background: var(--bg-dark);
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .profile-image img {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid var(--accent);
+    }
+
+    .profile-info {
+      flex: 1;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1rem;
+    }
+
+    .skill {
+      background: var(--bg-light);
+      padding: 1rem;
+      border-left: 5px solid var(--accent);
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .project-card, .experience-card {
+      background: var(--bg-light);
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      margin-bottom: 2rem;
+      border-left: 5px solid var(--accent);
+    }
+
+    .project-card h3, .experience-card h3 {
+      margin-bottom: 0.5rem;
+      color: var(--text-dark);
+    }
+
+    .project-card p, .experience-card p {
+      margin-bottom: 0.8rem;
+      line-height: 1.6;
+    }
+
+    .projectimg, .experienceimg {
+      width: 400px;
+      height: 400px;
+      display: block;
+      margin: 0 auto 1rem auto;
+    }
+
+    .project-link {
+      display: inline-block;
+      background: var(--accent);
+      color: #fff;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background 0.3s ease;
+    }
+
+    .project-link:hover {
+      background: #3d3d3d;
+    }
+
+    form {
+      background: var(--bg-light);
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    button {
+      background: var(--accent);
+      color: white;
+      padding: 0.8rem 1.6rem;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background: #005c8c;
+    }
+
+    footer {
+      background: var(--secondary);
+      color: var(--text-light);
+      text-align: center;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Mohommed Faraz</h1>
+    <p>Full-Stack Web Developer & Data Administrator</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul class="navbar">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#experience">Experience</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- About Section -->
+  <section id="about" class="profile-card">
+    <div class="profile-info">
+      <h3>Hello, I'm Faraz</h3>
+      <p>I’m a full-stack web developer with a passion for building scalable, user-friendly web solutions. With 2+ years of hands-on experience in both frontend and backend technologies, I combine clean, efficient code with eye-catching, responsive design to deliver high-quality digital products. My expertise spans modern frameworks and tools such as JavaScript, React, Node.js, HTML, CSS, and SQL, allowing me to develop everything from simple websites to complex web applications.
+In addition to web development, I have solid experience in software development, working on custom applications tailored to client needs, ensuring functionality, performance, and security. I’m also skilled in data entry and database management, bringing strong attention to detail, accuracy, and speed to handle large volumes of data effectively.
+I enjoy solving complex problems, optimizing workflows, and collaborating with cross-functional teams to bring ideas to life. I’m committed to continuous learning, staying updated with the latest technologies, and improving my craft to deliver innovative solutions that exceed expectations.</p>
+    </div>
+    <div class="profile-image">
+      <img src="C:\Users\THARINDI IMESHANI\Downloads\WhatsApp Image 2025-05-11 at 13.19.18_d41a513a.jpg" alt="Profile">
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">HTML & CSS</div>
+      <div class="skill">JavaScript</div>
+      <div class="skill">Responsive Design</div>
+      <div class="skill">Adobe XD</div>
+      <div class="skill">Docker/GitHub</div>
+      <div class="skill">Database management</div>
+      <div class="skill">React/Vue</div>
+      <div class="skill">C#/C++/Java</div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="project-card">
+      <img src="C:\Users\THARINDI IMESHANI\OneDrive\Pictures\lankeshassociates.png" alt="Lankesh Associates Website" class="projectimg">
+      <h3>Website for Lankesh Associates</h3>
+      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+      <p>I designed and developed a responsive, user-friendly website for Lankesh Associates...</p>
+      <a href="https://lankeshassociates.com/index.html" target="_blank" class="project-link">View Live</a>
+    </div>
+
+    <div class="project-card">
+      <img src="C:\Users\THARINDI IMESHANI\OneDrive\Pictures\homebedsheet.png" alt="HomeBedsheet Website" class="projectimg">
+      <h3>HomeBedsheet – Practice Website</h3>
+      <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+      <p>I created a practice website for HomeBedsheet Lankesh using HTML and CSS...</p>
+      <a href="https://lankeshpartners20.github.io/homebedsheet/" target="_blank" class="project-link">View Live</a>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience">
+    <h2>Experience</h2>
+    <div class="experience-card">
+      <img src="C:\Users\THARINDI IMESHANI\OneDrive\Pictures\LANKESH PARTNERS.png" alt="Lankesh Partners Logo" class="experienceimg">
+      <h3>Data Administrator – Lankesh Partners</h3>
+      <p><strong>Tools Used:</strong> Microsoft Excel, Google Sheets, Salesforce</p>
+      <p>I worked as a Data Administrator at Lankesh Partners...</p>
+      <p><strong>Workplace Address:</strong> NO. 79 1/1, Panchikawatta Road, Colombo 10, Sri Lanka</p>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" name="email" required />
+      </div>
+      <div class="form-group">
+        <label for="message">Your Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; Mohommed Faraz. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    // Optional: Simple animation on scroll
+    const animateElements = document.querySelectorAll('.project-card, .skill');
+
+    function reveal() {
+      animateElements.forEach(el => {
+        const top = el.getBoundingClientRect().top;
+        if (top < window.innerHeight - 100) {
+          el.classList.add('in-view');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', reveal);
+  </script>
+</body>
+</html>
